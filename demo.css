@@ -1,0 +1,445 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+
+    border: 1px solid white;
+    border-radius: 0px 0px 12px 12px;
+    box-shadow:0px 1px 10px rgb(0, 0, 0, 0.2);
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 5vw, 5rem);
+    padding: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-bar a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+}
+
+.nav-bar a::after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 0%;
+    
+    bottom: -10px;
+    left: 0;
+    background-color: red;
+
+    border-radius: 12px;
+    transition: width 0.3s ease-in;
+}
+
+.nav-bar a:hover::after{
+    width: 100%;
+}
+
+.welcome{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    gap: 3%;
+
+    height: auto;
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 1px solid white;
+    border-radius:20px;
+
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2);
+
+    background-color: white;
+}
+
+.welcome p{
+    font-family: 'Chenla', cursive;
+    font-size: 20px;
+}
+.cryptography {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* missing semicolon fixed */
+    gap: 20px;
+}
+
+.encrypt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Chenla', cursive;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+    width: 500px;
+    height: 500px;
+}
+
+.encrypt h3 {
+    font-family: 'Chenla', cursive;
+    text-decoration: underline;
+    color: aqua;
+}
+
+.encrypt input {
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    width: 200px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    transition: 0.2s ease-in-out;
+}
+
+.encrypt input:focus {
+    border: none;
+    background-color: transparent;
+    width: 300px;
+    border-bottom: 2px solid aqua;
+}
+
+.encrypt button {
+    height: 40px;
+    width: 200px;
+    background-color: aqua;
+    border: 4px solid aqua;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.encrypt button:hover,
+.encrypt button:focus {
+    background-color: rgb(3, 214, 214);
+}
+
+.force {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Hanuman', serif;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+}
+
+.force p{
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: 'Chenla', cursive;
+}
+
+.force h3 {
+    font-family: 'Chenla', cursive;
+    text-decoration: underline;
+}
+
+.attack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Chenla', cursive;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+    width: 500px;
+}
+
+.attack h3 {
+    text-decoration: underline;
+    color: aqua;
+}
+
+.attack input {
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    width: 200px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    transition: 0.2s ease-in-out;
+}
+
+.attack input:focus {
+    border: none;
+    background-color: transparent;
+    width: 300px;
+    border-bottom: 2px solid aqua;
+}
+
+.attack button {
+    height: 40px;
+    width: 200px;
+    background-color: aqua;
+    border: 4px solid aqua;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.attack button:hover,
+.attack button:focus {
+    background-color: rgb(3, 214, 214);
+}
+
+.RSA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.RSA-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Chenla', cursive;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+    width: 90%;
+}
+
+.RSA-p p{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.RSA-demo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+    width: 600px;
+}
+.RSA-demo label{
+    font-family: 'Chenla', cursive;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+.keyGenerate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+    width: 600px;
+    font-family: 'Chenla', cursive;
+}
+
+.keyGenerate label{
+    margin-top: 20px;
+    font-family: 'Chenla', cursive;
+    font-size: 20px;
+}
+
+.keyGenerate button{
+    height: 40px;
+    width: 200px;
+    background-color: aqua;
+    border: 4px solid aqua;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.keyGenerate input{
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    width: 200px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    transition: 0.2s ease-in-out;
+}
+
+.keyGenerate input:focus {
+    border: none;
+    background-color: transparent;
+    width: 300px;
+    border-bottom: 2px solid aqua;
+}
+
+.keyGenerate strong, .keyGenerate p {
+    font-family: 'Chenla', cursive;
+    font-size: 20px;
+}
+
+.RSAen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+    width: 600px;
+    font-family: 'Chenla', cursive;
+}
+
+.RSAen label{
+    font-size: 20px;
+}
+
+.RSAen input{
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    width: 200px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    transition: 0.2s ease-in-out;
+}
+
+.RSAen input:focus {
+    border: none;
+    background-color: transparent;
+    width: 300px;
+    border-bottom: 2px solid aqua;
+}
+
+.RSAen button{
+    height: 40px;
+    width: 200px;
+    background-color: aqua;
+    border: 4px solid aqua;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.RSAde{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+    width: 600px;
+    font-family: 'Chenla', cursive;
+}
+
+.RSAde input{
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    width: 200px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    transition: 0.2s ease-in-out;
+}
+
+.RSAde input:focus {
+    border: none;
+    background-color: transparent;
+    width: 300px;
+    border-bottom: 2px solid aqua;
+}
+
+.RSAde button{
+    height: 40px;
+    width: 200px;
+    background-color: aqua;
+    border: 4px solid aqua;
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.RSAde label{
+    font-size: 20px;
+}
+
+.keyExp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 3px 3px 30px rgba(192, 192, 192, 0.619);
+    width: 90%;
+    font-family: 'Chenla', cursive;
+}
+
+.keyExp p{
+    margin-right: 2%;
+    margin-left: 2%;
+    font-family: 'Chenla', cursive;
+    font-size: 20px;
+}

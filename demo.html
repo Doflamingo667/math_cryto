@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang&display=swap" rel="stylesheet">
+    <title>Cryptography</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <div class="header">
+            <div class="logo">
+                <h1>Math Train</h1>
+            </div>
+
+            <nav class="nav-bar">
+                <a href="index.html">Home</a>
+                <a href="demo.html">Demo</a>
+                <a href="about.html">About us</a>
+            </nav>
+    </div>
+    
+    <div​ class="welcome">
+            <p>Demo នេះយើងធ្វើការតេស្តមើលទៅលើ​ ការ​ Encrypt & Decrypt​​ ​បានក្នុងពេលតែមួយ។​</p>
+    </div​>
+
+
+    <div class="cryptography">
+        <div class="keyExp">
+                <h1>1. Classical Cryptography.</h1>
+                <p>គ្រីបតូក្រាហ្វីបែបបុរាណ (Classical Cryptography) គឺជាវិធីសាស្ត្ររក្សាសម្ងាត់ទិន្នន័យដែលត្រូវ
+                    បានប្រើប្រាស់តាំងពីសម័យបុរាណរហូតដល់ពាក់កណ្តាលសតវត្សទី២០ ដែលភាគច្រើនផ្អែកលើការចាត់ចែង
+                    តួអក្សរដោយដៃ ឬប្រើម៉ាស៊ីនមេកានិកសាមញ្ញៗ។ វិធីសាស្ត្រនេះចែកចេញជាពីរប្រភេទធំៗគឺ ការជំនួសតួអក្សរ 
+                    (Substitution) ដែលប្តូរតួអក្សរមួយទៅជាតួអក្សរផ្សេងទៀតដូចជា Caesar Cipher និងការផ្លាស់ប្តូរ
+                    ទីតាំងតួអក្សរ (Transposition) ដែលរក្សាតួអក្សរដដែលតែរៀបលំដាប់លំដោយឡើងវិញ។ 
+                    មិនដូចគ្រីបតូក្រាហ្វីសម័យទំនើបដែលផ្អែកលើគណិតវិទ្យាស្មុគស្មាញ និងកុំព្យូទ័រល្បឿនលឿននោះទេ 
+                    គ្រីបតូក្រាហ្វីបែបបុរាណប្រើប្រាស់កូនសោតែមួយ (Symmetric Key) សម្រាប់ទាំងការចាក់សោ និងដោះសោ 
+                    ដែលវាងាយស្រួលនឹងត្រូវគេបំបែកកូដតាមរយៈការវិភាគភាពញឹកញាប់នៃតួអក្សរ (Frequency Analysis)។
+                </p>
+            </div>
+        <div class="encrypt">
+            <h3>ដំណើរការ Encryption​​ និង Decrypte</h3>
+            <label>សូមសរសេរជាភាសាអង់គ្លេស:</label>
+            <input type="text" id="text" placeholder="Ex: Hello"> 
+
+            <label>សូមធ្វើការបញ្ចូលកូនសោរ :</label>
+            <input type="number" id="key" placeholder="Ex: 3">
+
+            <button onclick="encrypted()">Encrypte</button>
+            <button onclick="decrypted()">Decrypte</button>
+            <span id="result">Result: </span>
+        </div>
+
+        <div class="force">
+            <h3>Brute Force Attack</h3>
+            <p>Brute Force Attack គឺជាវិធីវាយប្រហារមួយលើប្រព័ន្ធអ៊ិនគ្រីប ដែលអ្នកវាយប្រហារធ្វើការសាកល្បងសោសម្ងាត់ (Key) គ្រប់តម្លៃទាំងអស់ ដោយគ្មានការទាយទុកជាមុន រហូតដល់រកឃើញសោត្រឹមត្រូវ។ វិធីនេះមិនអាស្រ័យលើភាពឆ្លាតវៃ ឬការយល់ដឹងអំពីសារដើមទេ ប៉ុន្តែអាស្រ័យលើកម្លាំងគណនា និងពេលវេលា។
+                ក្នុងបរិបទនៃ Classical Encryption 
+                ដូចជា Caesar Cipher ចំនួនសោមានតិច 
+                (ឧទាហរណ៍ មានតែ 25 សោ) ដូច្នេះ Brute 
+                Force Attack អាចសាកល្បងសោទាំងអស់
+                បានយ៉ាងឆាប់រហ័ស និងបំបែកសារបានដោយងាយ។ 
+                ទោះយ៉ាងណា សម្រាប់ Modern Encryption 
+                ដែលមានសោវែង និងចំនួនសោច្រើនខ្លាំង Brute Force Attack
+                មិនមានប្រសិទ្ធភាពទេ ព្រោះត្រូវការពេលវេលាយូរខ្លាំងស្ទើរ
+                មិនអាចអនុវត្តបាន។</p>
+        </div>
+
+        <div class="attack">
+            <h3>ដំណើរការនៃ​ Brute Force Attack</h3>
+            <label>សូមសរសេរពាក្យដែលត្រូវបានអ៊ិនគ្រីបជាភាសាអង់គ្លេស:</label>
+            <input type="text" id="text2" placeholder="Ex: Khoor"> 
+            <button onclick="force()">Brute Force Attack</button>
+            <span id="result2">Result: </span>
+
+        </div>
+    </div>
+
+    <div class="RSA">
+        <div class="RSA-p">
+            <h1>2. RSA Algorithms</h1>
+            <p>RSA (Rivest–Shamir–Adleman) គឺជាប្រព័ន្ធគ្រីបតូក្រាហ្វិកបែប Asymmetric Encryption 
+                ដែលប្រើប្រាស់ "កូនសោ" ពីរខុសគ្នាគឺ Public Key សម្រាប់ចាក់សោទិន្នន័យ និង Private Key 
+                សម្រាប់ដោះសោវិញ។ វាដំណើរការផ្អែកលើគោលការណ៍គណិតវិទ្យានៃការគុណលេខបឋម (Prime Numbers) 
+                ដ៏ធំពីរបញ្ចូលគ្នា ដែលបង្កើតបានជាលទ្ធផលមួយយ៉ាងស្មុគស្មាញ រហូតដល់កុំព្យូទ័រដែលមានសមត្ថភាពខ្លាំងបំផុត
+                ក៏ពិបាកនឹងបំបែកកូដនោះបានដែរ ប្រសិនបើគ្មានកូនសោឯកជន។ ជាទូទៅ RSA ត្រូវបានគេប្រើប្រាស់យ៉ាង
+                ទូលំទូលាយក្នុងការរក្សាសុវត្ថិភាពលើអ៊ីនធឺណិត ដូចជាការការពារពាក្យសម្ងាត់ ការធ្វើប្រតិបត្តិការធនាគារ 
+                និងការចុះហត្ថលេខាឌីជីថល ដើម្បីធានាថាទិន្នន័យមិនត្រូវបានលួចមើល ឬកែបន្លំដោយជនអនាមិកឡើយ។</p>
+        </div>
+            <h2>RSA Encryption Demo (Manual Math)</h2>
+
+            <div class="keyExp">
+                <h1>2.1 RSA key generate</h1>
+                <p>ជាដំបូង អ្នកត្រូវជ្រើសរើសលេខបឋមធំៗចំនួនពីរដែលខុសគ្នា 
+                        គឺលេខ ភី (P) និងលេខ ឃ្យូ (Q) រួចយកលេខទាំងពីរនេះមកគុណគ្នាដើម្បីរកតម្លៃ
+                         អិន (N) ដែលយើងហៅថា ម៉ូឌុលឡូស (Modulus)។ បន្ទាប់មក យើងត្រូវរកតម្លៃ 
+                         ហ្វី (Phi) ដោយយក (P ដក ១) គុណនឹង (Q ដក ១)។ នៅជំហានបន្ត 
+                         យើងជ្រើសរើសលេខ អ៊ី (E) មួយសម្រាប់ធ្វើជាកូនសោសាធារណៈ ដោយលេខ អ៊ី 
+                         នេះត្រូវតែជាលេខដែលមិនអាចចែកដាច់នឹងតម្លៃ ហ្វី ហើយជាទូទៅគេនិយមប្រើលេខ 
+                         ៦៥៥៣៧។ ជំហានចុងក្រោយ គឺការស្វែងរកលេខ ឌី (D) សម្រាប់ធ្វើជាកូនសោឯកជន 
+                         ដោយប្រើវិធីសាស្ត្រគណិតវិទ្យាដើម្បីឱ្យ (D គុណនឹង E) នៅពេលដែលយកទៅចែកនឹងតម្លៃ 
+                         ហ្វី គឺត្រូវតែសល់សំណល់ស្មើនឹង ១។ ជាលទ្ធផល អ្នកនឹងទទួលបានកូនសោសាធារណៈដែលរួមមានលេខ
+                          អ៊ី និង អិន សម្រាប់ឱ្យគេចាក់សោទិន្នន័យផ្ញើមកអ្នក និងកូនសោឯកជនដែលរួមមានលេខ 
+                          ឌី និង អិន សម្រាប់ទុកឱ្យអ្នកដោះសោអានសារនោះវិញតែម្នាក់ឯង។
+                </p>
+            </div>
+            <div class="keyGenerate">
+                <label>សូមបញ្ចូលតម្លៃទី១​ជាចំនួនបឋម (p >13)</label>
+                <input id="p" type="number" placeholder="Ex: 61">
+
+                <label>សូមបញ្ចូលតម្លៃទី២ជាចំនួនបឋម (q > 17)</label>
+                <input id="q" type="number" placeholder="Ex: 53">
+
+                <button onclick="KeyGenerate()">Generate Key</button>
+                <p id="result3">Result will appear here...</p>
+            </div>
+        </div>
+
+        <div class="keyExp">
+                <h1>2.2 RSA Encryption</h1>
+                <p>
+                    ការចាក់សោទិន្នន័យ ឬ Encryption គឺជាដំណើរការបំប្លែងព័ត៌មានពីទម្រង់ធម្មតាដែលអានយល់
+                     ទៅជាទម្រង់កូដសម្ងាត់ដែលមើលមិនយល់ ដើម្បីការពារសុវត្ថិភាពទិន្នន័យអំឡុងពេលបញ្ជូន ឬរក្សាទុក។ 
+                     នៅក្នុងប្រព័ន្ធ RSA ដំណើរការនេះប្រើប្រាស់កូនសោសាធារណៈ (Public Key) និងរូបមន្តគណិតវិទ្យា
+                     ដើម្បីគណនាសារដើមឱ្យទៅជាលេខកូដថ្មីមួយ ដែលមានតែអ្នកកាន់កូនសោឯកជន (Private Key)
+                      ត្រឹមត្រូវប៉ុណ្ណោះ ទើបអាចដោះសោបកប្រែមកជាអត្ថបទដើមវិញបាន។ គោលបំណងចម្បងនៃបច្ចេកវិទ្យានេះ 
+                      គឺដើម្បីធានាថាមានតែអ្នកដែលយើងចង់ឱ្យដឹងប៉ុណ្ណោះដែលអាចមើលខ្លឹមសារសារបាន 
+                      ទោះបីជាមានជនអនាមិកលួចស្ទាក់ចាប់យកទិន្នន័យនោះនៅតាមផ្លូវក៏ដោយ ក៏ពួកគេមិនអាចអានយល់ពី
+                      អត្ថន័យនៃកូដទាំងនោះឡើយ។
+                </p>
+            </div>
+
+        <div class="RSAen">
+                <h1>1.2 RSA Encryption</h1>
+                <label>សូមសរសេរពាក្យរបស់អ្នកជាភាសាអង់គ្លេស</label>
+                <input type="text" id="textEn" placeholder="Hello">
+
+                <label>សូមបញ្ចូលតម្លៃកូនសោរ Public (e)</label>
+                <input type="number" id="e1" placeholder="Public Key (e)">
+
+                <label>សូមបញ្ចូលតម្លៃ Modulos (n)</label>
+                <input type="number" id="n1" placeholder="Modulos (n)">
+
+                <button onclick="RSAencrypt()">Encrypt Text</button>
+                <div style="word-break: break-all;"><strong>Ciphertext:</strong> <span id="enResult"></span></div>
+            </div>
+
+            <div class="keyExp">
+                <h1>1.2 RSA Encryption</h1>
+                <p>
+                    ការដោះសោទិន្នន័យ ឬ Decryption គឺជាដំណើរការបញ្ច្រាសនៃសុវត្ថិភាពទិន្នន័យ 
+                    ដែលបំប្លែងលេខកូដសម្ងាត់រញ៉េរញ៉ៃ (Ciphertext) ឱ្យត្រឡប់មកជាព័ត៌មានដើម 
+                    (Plaintext) ដែលយើងអាចអានយល់វិញបាន។ នៅក្នុងប្រព័ន្ធ RSA ដំណើរការនេះតម្រូវឱ្យ
+                    មានកូនសោឯកជន (Private Key) តែមួយគត់ដែលត្រូវបានរក្សាទុកជាការសម្ងាត់ដោយអ្នកទទួល 
+                    ដើម្បីយកមកគណនាជាមួយរូបមន្តគណិតវិទ្យាទៅលើទិន្នន័យដែលបានចាក់សោរួច។ 
+                    ប្រសិនបើគ្មានកូនសោឯកជនត្រឹមត្រូវនេះទេ ទោះបីជាគេដឹងពីវិធីសាស្ត្រគណនា ឬមានកូនសោសាធារណៈក៏ដោយ
+                     ក៏មិនអាចបកស្រាយសារនោះបានឡើយ ដែលនេះគឺជាចំណុចខ្លាំងបំផុតនៃបច្ចេកវិទ្យា RSA 
+                     ក្នុងការរក្សាសម្ងាត់ព័ត៌មាននៅតាមប្រព័ន្ធអ៊ីនធឺណិត។
+                </p>
+            </div>
+
+            <div class="RSAde">
+                <h1>1.3 RSA Decryption</h1>
+                <label>សូមបញ្ចូលលេខកូដដែលបាន Encrypt (បំបែកដោយសញ្ញាក្បៀស)</label>
+                <input type="text" id="textDe" placeholder="Ex: 123, 456, 789">
+
+                <label>សូមបញ្ចូលតម្លៃកូនសោរ Private (d)</label>
+                <input type="number" id="d" placeholder="Private Key (d)">
+
+                <label>សូមបញ្ចូលតម្លៃ Modulos (n)</label>
+                <input type="number" id="n2" placeholder="Modulos (n)">
+
+                <button onclick="RSAdecrypt()">Decrypt Text</button>
+                <div><strong>Decrypted Message:</strong> <span id="deResult"></span></div>
+            </div>
+    </div>
+
+    <script src="Cryptography.js"></script>
+</body>
+</html>
