@@ -170,12 +170,12 @@ function KeyGenerate() {
         <strong>d:</strong> ${d}
     `;
     
-    // ចំណុចកែប្រែ៖ លុបបន្ទាត់ auto-fill ចេញពីទីនេះ
+    
 }
 
 function RSAencrypt() {
     const msg = document.getElementById('textEn').value;
-    // ត្រូវប្រាកដថា ID ក្នុង HTML គឺ "e1" និង "n1"
+   
     const e = BigInt(document.getElementById('e1').value);
     const n = BigInt(document.getElementById('n1').value);
 

@@ -31,7 +31,6 @@ body{
     justify-content: center;
     align-items: center;
     gap: clamp(1rem, 5vw, 5rem);
-    padding: 30px;
 }
 
 .nav-bar a{
@@ -112,14 +111,14 @@ body{
 }
 
 .story h1{
-    font-size: clamp(0.5rem, 1.5vw, 3rem);
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Chenla', cursive;
     text-align: center;
 }
 
-.story h1 p{
-    font-size: 20px;
-    font-size: clamp(0.5rem, 1vw, 3rem);
+.story p{
+    font-weight: lighter;
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Chenla', cursive;
 }
 
@@ -151,14 +150,14 @@ body{
     border-radius: 12px;
 }
 .history h1{
-    font-size: clamp(0.5rem, 1.5vw, 3rem);
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Chenla', cursive;
     text-align: center;
 }
 
 .history h1 p{
-    font-size: 20px;
-    font-size: clamp(0.5rem, 1vw, 3rem);
+    font-weight: lighter;
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Chenla', cursive;
 }
 
@@ -183,14 +182,14 @@ body{
 }
 
 .why h1{
-    font-size: clamp(0.5rem, 1.5vw, 3rem);
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Chenla', cursive;
     text-align: center;
 }
 
 .why h1 p{
-    font-size: 20px;
-    font-size: clamp(0.5rem, 1vw, 3rem);
+    font-weight: lighter;
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Chenla', cursive;
 }
 
@@ -215,14 +214,15 @@ body{
 }
 
 .apply h1{
-    font-size: clamp(0.5rem, 1.5vw, 3rem);
+
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Chenla', cursive;
     text-align: center;
 }
 
 .apply h1 p{
-    font-size: 20px;
-    font-size: clamp(0.5rem, 1vw, 3rem);
+    font-weight: lighter;
+    font-size: clamp(1rem, 1.2vw, 3rem);
     font-family: 'Chenla', cursive;
 }
 
@@ -237,7 +237,8 @@ body{
 }
 
 .link h1{
-    font-size: clamp(0.5rem, 1.5vw, 3rem);
+    font-weight: lighter;
+    font-size: clamp(1rem, 1.2vw, 3rem);
     color: white;
     font-family: 'Chenla', cursive;
 }
